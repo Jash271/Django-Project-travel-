@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {% for pi in pi %}
+    <!-- Destination -->
+    <div class="destination item">
+       
+            {% if pi.offer %}
+            <div class="spec_offer text-center"><a href="#">Special Offer</a></div>
+            {% endif %}
+        </div>
+
+
+        <div class="destination_content">
+          <h3>  <div class="destination_title">{{pi.name}}</div></h3>
+         <h3>Destination code <div class="destination_code"><p>{{pi.code}}</p></div></h3>
+            <div class="destination_subtitle"><p>{{pi.des}}</p></div>
+            <div class="destination_price">From ${{pi.price}}</div>
+        </div>
+        
+    </div>
+    {% endfor %}
+
+
+        <form action =  'destination' method='POST'>
+        {% csrf_token %}
+        enter code to view the itenary of the place <input type="text" name='num1'>
+        <input type='submit'>
+        </form>
+    
+        
+</body>
+</html>

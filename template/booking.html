@@ -1,0 +1,32 @@
+
+
+
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Book</h1>
+
+
+    <form action="book" method='POST'>
+        {% csrf_token %}
+
+        enter  first name <input type="text" name='name'>
+        enter  aadhar number <input type="text" name='no'>
+        enter no of children<input type="integer" name='child'>
+        enter no of adults <input type="integer" name='adult'>
+        
+     <input type='submit'>
+           
+
+    </form>
+</body>
+</html>
